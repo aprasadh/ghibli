@@ -1,0 +1,27 @@
+<html>
+<head>
+    <title>Movies List</title>
+</head>
+<body>
+    <table>
+        <thead>
+            <th>
+                <td>Title</td>
+                <td>Cast</td>
+            </th>
+        </thead>
+        <tbody>
+            {% for movie in movies %}
+            <tr>
+                <td>{{movie.title}}</td>
+                <td>
+                {% for person in movie.people %}
+                {{person.name}},&nbsp;
+                {% endfor %}
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
