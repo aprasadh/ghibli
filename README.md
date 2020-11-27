@@ -22,3 +22,7 @@ I used Mac environment for development.
 * Open the link `http://localhost:8000/movies` using browser. It displays the movie list page
 
 To run test cases, please run `pytest` command from the project root folder.
+
+## Future improvements
+
+Currently all the functions written in this project doesn't use Python's `async` feature. In future, I would like to make all the functions as `async` as possible.
