@@ -17,7 +17,7 @@ def test_movies_endpoint():
     # validate the basic contents of HTML
     soup = BeautifulSoup(response.text, features="html.parser")
     tables = soup.find_all("table")
-    # Check if there is one table
+    # Check if there is only one table
     assert len(tables) == 1
     # Check if the table has data
     body = tables[0].find_all("tr")
