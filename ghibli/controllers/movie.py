@@ -22,16 +22,8 @@ def fetch_all_movies():
     movies_list = composite_service.fetch_all_movies()
     return movies_list
 
-@router.get("/")
-async def root():
-    """
-    Root endpoint
-    """
-    logging.info('Into root endpoint')
-    return {"message": "Hello World"}
-
 @router.get("/movies", response_class=HTMLResponse)
-async def movies(request: Request):
+def movies(request: Request):
     """
     List of movies
     """

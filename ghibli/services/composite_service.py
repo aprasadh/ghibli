@@ -20,13 +20,15 @@ class CompositeService:
         logging.debug("Fetching all movies from composite service")
         service_movie = MovieService()
         service_person = PersonService()
+        # Fetch all movies
         movies = service_movie.fetch_all_movies('id', 'title')
         movie_dict = {}
         for movie in movies:
             movie_dict[movie['id']] = movie
-
+        # Fetch all people
         people = service_person.fetch_all_people('id', 'name', 'films')
         url_length = len(self.base_url + '/films/')
+        # Merge people data with movies
         for person in people:
             for _id in person['films']:
                 movie = movie_dict[_id[url_length:]]

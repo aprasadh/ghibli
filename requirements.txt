@@ -5,4 +5,5 @@ pylint==2.6.0
 requests==2.25.0
 Jinja2==2.11.2
 httpx==0.16.1
+beautifulsoup4==4.9.3
 pytest==6.1.2
